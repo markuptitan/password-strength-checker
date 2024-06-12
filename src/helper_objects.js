@@ -1,4 +1,4 @@
-const strengthCheckerPatters = {
+const strengthCheckerPatterns = {
   lowerCaseCharacter: /[a-z]/,
   upperCaseCharacter: /[A-Z]/,
   digitCharacter: /\d/,
@@ -6,4 +6,4 @@ const strengthCheckerPatters = {
   whitespaceCharacter: /\s/,
 };
 
-module.exports = { strengthCheckerPatters };
+module.exports = { strengthCheckerPatterns };
