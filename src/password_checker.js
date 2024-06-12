@@ -16,7 +16,10 @@ function passwordStrength(password) {
     if (strengthCheckerPatterns.upperCaseCharacter.test(password)) {
       conditionsMet++;
     }
-  
+  if (strengthCheckerPatterns.digitCharacter.test(password)) {
+    conditionsMet++;
+  }
+
   if (conditionsMet >= 6) {
     return "strong";
   } else if (conditionsMet >= 4) {

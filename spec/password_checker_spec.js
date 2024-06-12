@@ -6,11 +6,11 @@ describe("passwordStrength", function () {
     expect(passwordStrength("Numberz0")).toEqual("invalid");
   });
   it("Returns weak for passwords meeting exactly 3 conditions", function () {
-    expect(passwordStrength("samson007")).toEqual("weak");
-    expect(passwordStrength("siyabonga664")).toEqual("weak");
+    expect(passwordStrength("samsonlukhele")).toEqual("weak");
+    expect(passwordStrength("siyabonga")).toEqual("weak");
   });
   it("Returns weak for passwords meeting 4 - 5 conditions", function () {
-    expect(passwordStrength("Samson007")).toEqual("medium");
-    expect(passwordStrength("Siyabonga664")).toEqual("medium");
+    expect(passwordStrength("SamsonManOfPeace32")).toEqual("medium");
+    expect(passwordStrength("SiyabongaLukhele32")).toEqual("medium");
   });
 });
