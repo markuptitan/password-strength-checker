@@ -1,7 +1,8 @@
+const { strengthCheckerPatterns } = require("./helper_objects");
 function passwordStrength(password) {
-    if (password.length <= 8) {
-        return "Invalid"
-    }
+  if (password.length <= 8) {
+    return "Invalid";
+  }
   return;
 }
 
