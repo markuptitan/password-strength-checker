@@ -2,7 +2,11 @@ const { passwordStrength } = require("./../src/password_checker");
 
 describe("passwordStrength", function () {
   it("Returns invalid for empty passwords and passwords with less than 9 characers", function () {
-    expect(passwordStrength("")).toEqual("Invalid");
-    expect(passwordStrength("Numberz0")).toEqual("Invalid");
+    expect(passwordStrength("")).toEqual("invalid");
+    expect(passwordStrength("Numberz0")).toEqual("invalid");
+  });
+  it("Returns weak for passwords meeting exactly 3 conditions", function () {
+    expect(passwordStrength("samson007")).toEqual("weak");
+    expect(passwordStrength("siyabonga664")).toEqual("weak");
   });
 });
