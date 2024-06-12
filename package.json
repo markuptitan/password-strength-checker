@@ -1,0 +1,18 @@
+{
+  "name": "password-strength-checker",
+  "version": "1.0.0",
+  "description": "This is a password strength checker built using a TDD approach. ",
+  "main": "src/password_checker.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": {
+    "name": "Siyabonga Samson Lukhele",
+    "email-address": "samsonlukhele76@gmail.com",
+    "github-username": "markuptitan"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^5.1.0"
+  }
+}
