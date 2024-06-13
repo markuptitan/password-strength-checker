@@ -11,6 +11,11 @@ function passwordStrength(password) {
     strengthCheckerPatterns.specialCaseCharacter,
     strengthCheckerPatterns.whitespaceCharacter,
   ];
+  for (const pattern of patterns) {
+    if (pattern.test(password)) {
+      conditionsMet++;
+    }
+  }
 }
 
 console.log(passwordStrength(""));
