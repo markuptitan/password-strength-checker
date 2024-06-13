@@ -3,7 +3,7 @@ function passwordStrength(password) {
   if (password.length <= 8) {
     return "invalid";
   }
-  let conditionsMet = 0;
+  let conditionsMet = 2;
   const patterns = [
     strengthCheckerPatterns.lowerCaseCharacter,
     strengthCheckerPatterns.upperCaseCharacter,
