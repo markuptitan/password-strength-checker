@@ -16,6 +16,15 @@ function passwordStrength(password) {
       conditionsMet++;
     }
   }
+  if (conditionsMet >= 6) {
+    return "strong";
+  } else if (conditionsMet >= 4) {
+    return "medium";
+  } else if (conditionsMet == 3) {
+    return "weak";
+  } else {
+    return "invalid";
+  }
 }
 
 console.log(passwordStrength(""));
