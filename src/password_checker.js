@@ -27,6 +27,4 @@ function passwordStrength(password) {
   }
 }
 
-console.log(passwordStrength(""));
-
 module.exports = { passwordStrength };
