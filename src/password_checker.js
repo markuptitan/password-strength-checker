@@ -1,17 +1,12 @@
 function passwordStrength(password) {
-  if (password.length <= 8) {
+  if (!password || password.length <= 8) {
     return "invalid";
   }
   let conditionsMet = 2;
-  const patterns = [
-    /[a-z]/,
-    /[A-Z]/,
-    /\d/,
-    /[^a-zA-Z0-9]/,
-    /\s/,
-  ];
-  for (const pattern of patterns) {
-    if (pattern.test(password)) {
+  const conditions = [/[a-z]/, /[A-Z]/, /\d/, /[!@#$%^&*(),.?":{}|<>]/, /\s/];
+
+  for (let condition of conditions) {
+    if (condition.test(password)) {
       conditionsMet++;
     }
   }
@@ -27,4 +22,3 @@ function passwordStrength(password) {
 }
 
 module.exports = { passwordStrength };
-  
