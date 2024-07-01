@@ -1,13 +1,13 @@
-const passwordStrengthMessages = {
-  passwordIsWeak:"weak",
-  passwordIsMedium: "medium",
-  passwordIsStrong: "strong",
-  passwordIsInvalid: "invalid"
-}
+const strengthMessages = {
+  isWeak: "weak",
+  isMedium: "medium",
+  isStrong: "strong",
+  isInvalid: "invalid",
+};
 
 function passwordStrength(password) {
   if (!password || password.length <= 8) {
-    return "invalid";
+    return strengthMessages.isInvalid;
   }
   let conditionsMet = 2;
   const conditions = [/[a-z]/, /[A-Z]/, /\d/, /[!@#$%^&*(),.?":{}|<>]/, /\s/];
@@ -18,13 +18,13 @@ function passwordStrength(password) {
     }
   }
   if (conditionsMet >= 6) {
-    return "strong";
+    return strengthMessages.isStrong;
   } else if (conditionsMet >= 4) {
-    return "medium";
+    return strengthMessages.isMedium;
   } else if (conditionsMet == 3) {
-    return "weak";
+    return strengthMessages.isWeak;
   } else {
-    return "invalid";
+    return strengthMessages.isInvalid;
   }
 }
 
