@@ -1,3 +1,10 @@
+const passwordStrengthMessages = {
+  passwordIsWeak:"weak",
+  passwordIsMedium: "medium",
+  passwordIsStrong: "strong",
+  passwordIsInvalid: "invalid"
+}
+
 function passwordStrength(password) {
   if (!password || password.length <= 8) {
     return "invalid";
