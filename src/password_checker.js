@@ -21,7 +21,7 @@ function passwordStrength(password) {
     return strengthMessages.isStrong;
   } else if (conditionsMet >= 4) {
     return strengthMessages.isMedium;
-  } else if (conditionsMet == 3) {
+  } else if (conditionsMet === 3) {
     return strengthMessages.isWeak;
   } else {
     return strengthMessages.isInvalid;
