@@ -1,15 +1,14 @@
-const { strengthCheckerPatterns } = require("./helper_objects");
 function passwordStrength(password) {
   if (password.length <= 8) {
     return "invalid";
   }
   let conditionsMet = 2;
   const patterns = [
-    strengthCheckerPatterns.lowerCaseCharacter,
-    strengthCheckerPatterns.upperCaseCharacter,
-    strengthCheckerPatterns.digitCharacter,
-    strengthCheckerPatterns.specialCaseCharacter,
-    strengthCheckerPatterns.whitespaceCharacter,
+    /[a-z]/,
+    /[A-Z]/,
+    /\d/,
+    /[^a-zA-Z0-9]/,
+    /\s/,
   ];
   for (const pattern of patterns) {
     if (pattern.test(password)) {
