@@ -18,6 +18,6 @@ describe("passwordStrength():", function () {
     expect(passwordStrength("Siyabonga Lukhele32!")).toBe("strong");
   });
   it("should return 'weak' for an input of space characters that satisfy the required password length", function () {
-    expect(passwordStrength("           ")).toBe(weak);
+    expect(passwordStrength("           ")).toBe("weak");
   });
 });
