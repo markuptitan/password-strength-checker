@@ -28,4 +28,4 @@ function passwordStrength(password) {
   }
 }
 
-module.exports = { passwordStrength };
+module.exports = { passwordStrength, strengthMessages };
