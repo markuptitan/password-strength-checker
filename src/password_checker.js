@@ -28,4 +28,20 @@ function passwordStrength(password) {
   }
 }
 
-module.exports = { passwordStrength, strengthMessages };
+function checkPasswordStrength() {
+  const password = document.getElementById("password").value;
+  const result = passwordStrength(password);
+  const resultDiv = document.getElementById("result");
+
+  if (result === strengthMessages.isStrong) {
+    resultDiv.style.color = "green";
+  } else if (result === strengthMessages.isMedium) {
+    resultDiv.style.color = "orange";
+  } else if (result === strengthMessages.isWeak) {
+    resultDiv.style.color = "red";
+  } else {
+    resultDiv.style.color = "black";
+  }
+
+  resultDiv.textContent = `Password strength is ${result}`;
+}
